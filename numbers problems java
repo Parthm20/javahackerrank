@@ -1,0 +1,101 @@
+import java.util.Scanner;
+
+class programs{
+private	int  x;
+ programs()
+    {
+	  x=0;
+	 }
+	 programs(int x)
+	 {
+	  this.x=x;
+	 }
+	  boolean isZero()
+	 {
+		 if(x==0)
+			 return true;
+		 else 
+			 return false;
+	 }
+	  boolean isPositive()
+	 {
+		 if(x>0)
+			 return true;
+		 else 
+			 return false;
+	 }
+	  boolean isNegative()
+	 {
+		 if(x<0)
+			 return true;
+		 else 
+			 return false;
+	 }
+	  boolean isOdd()
+	 {
+		 if(x % 2!=0)
+			 return true;
+		 else 
+			 return false;
+	 }
+	  boolean isEven()
+	 {
+		 if(x % 2 ==0)
+			 return true;
+		 else 
+			 return false;
+	 }
+	  boolean isPrime()
+	 {
+		 if (x <= 1)
+		        return false;
+		 
+		   
+		    for (int i = 2; i <= Math.sqrt(x); i++)
+		        if (x % i == 0)
+		            return false;
+		 
+		    return true;
+		}
+		boolean isArmstrong()
+		{
+		    int rem,arm=0;
+		   int num=x;
+		    while(x>0)
+		    {
+		        rem=x%10;
+		        arm+=rem*rem*rem;
+		        x/=10;
+		    }
+		    if(num==arm)
+		    return true;
+		    else
+		    return false;
+		}
+}
+
+  public class Main{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int x= sc.nextInt();
+		programs m=new programs(x);
+		  if(m.isNegative())
+			   System.out.println("Number is Negative");
+			  if(m.isPositive())
+			   System.out.println("Number is Positive");
+			  if(m.isEven())
+			   System.out.println("Number is Even");
+			  if(m.isOdd())
+			   System.out.println("Number is Odd");
+			  if(m.isZero())
+			   System.out.println("Number is Zero");
+			  if(m.isPrime())
+				   System.out.println("Number is Prime");
+		      if(m.isArmstrong())
+				   System.out.println("Number is Armstrong");
+
+	}
+
+}
