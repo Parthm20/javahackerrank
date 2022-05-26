@@ -1,0 +1,28 @@
+
+
+import java.io.*;
+
+class Main {
+	public static void main(String[] args)
+	{
+		try {
+			System.out.println("Inside try block");
+
+		
+			System.out.println(34 / 0);
+		}
+
+		catch (NullPointerException e) {
+
+			System.out.println(
+				"catch : exception not handled.");
+		}
+
+		finally {
+
+			System.out.println(
+				"finally : i will execute always.");
+		}
+		System.out.println("i want to run");
+	}
+}
